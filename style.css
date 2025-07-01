@@ -1,0 +1,74 @@
+body {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.pokedex {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  transition: transform 0.5s ease;
+  border-radius: 10px;
+}
+
+.screen {
+  width: 100%;
+  height: 400px;
+  background-color: #c9ffff;
+  transition: height 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+
+/* État fermé */
+.pokedex.closed .top {
+  transform: translateY(10px);
+}
+
+.pokedex.closed .bottom {
+  transform: translateY(-10px);
+}
+
+.pokedex.closed .screen {
+  height: 50px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcc00;
+  cursor: pointer;
+}
+
+img.top,
+img.bottom {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.content {
+  width: 95%;
+  height: 90%;
+}
