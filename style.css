@@ -102,7 +102,7 @@ img.bottom {
   margin-bottom: 10px;
   /* margin: 5px; */
   cursor: pointer;
-  width: 20%px;
+  width: auto;
   height: auto;
 }
 
@@ -231,4 +231,46 @@ img.bottom {
   padding: 2px;
   font-size: 18px;
   padding-top: 10px;
+}
+
+/* style for the mobile */
+@media (max-width: 600px) {
+  .pokedex {
+    width: 95vw;
+  }
+
+  .screen {
+    height: 300px;
+  }
+
+  .content {
+    flex-direction: column;
+    height: 90%;
+  }
+
+  #pokemon-info {
+    flex-direction: row;
+    height: auto;
+  }
+
+  #pokemon-info img {
+    width: 120px;
+    height: 120px;
+  }
+
+  #pokemon-description {
+    width: 90%;
+    height: auto;
+    font-size: 16px;
+  }
+
+  #pokemon-list {
+    font-size: 16px;
+    overflow-y: auto;
+  }
+
+  .pokemon-name {
+    width: auto;
+    margin-bottom: 8px;
+  }
 }
