@@ -2,14 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Pokédex Kalos Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="pokedex closed">
       <img src="./assets/top.png" alt="" class="top" />
       <div class="screen">
-        <div class="content"></div>
+        <div class="content" id="content=box">
+          <!-- Left Side, display pokemon info -->
+          <div id="pokemon-info">
+            <img id="pokemon-img" />
+            <div id="pokemon-types"></div>
+            <div id="pokemon-description"></div>
+          </div>
+
+          <!-- Right Side, display pokemon list -->
+          <div id="pokemon-list"></div>
+        </div>
       </div>
       <img src="./assets/bottom.png" alt="" class="bottom" />
     </div>
