@@ -1,12 +1,21 @@
 // Code for the start animation of the pokédex
 const pokedexDoc = document.querySelector('.pokedex');
 const toggleButton = document.getElementById('toggle');
+const content = document.getElementById('content-box');
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    pokedexDoc.classList.remove('closed');
-  }, 500);
-});
+window.addEventListener(
+  'load',
+  () => {
+    setTimeout(() => {
+      pokedexDoc.classList.remove('closed');
+    }, 500);
+
+    setTimeout(() => {
+      content.classList.remove('invisible');
+    }, 600);
+  },
+  100
+);
 
 //Fetching all the pokemons
 const pokemonCount = 151;
@@ -18,9 +27,14 @@ window.onload = async function () {
 
     let pokemon = document.createElement('div');
     pokemon.id = i;
-    pokemon.innerText = i.toString() + '. ' + pokedex[i]['name'].toUpperCase();
     pokemon.classList.add('pokemon-name');
     pokemon.addEventListener('click', updatePokemon);
+
+    let img = document.createElement('img');
+    img.src = pokedex[i]['img'];
+    img.classList.add('poke-img');
+
+    pokemon.appendChild(img);
     document.getElementById('pokemon-list').appendChild(pokemon);
   }
 
